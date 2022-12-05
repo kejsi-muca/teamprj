@@ -1,0 +1,125 @@
+body{
+    background-color: #e5eaf5;
+}
+.logo{
+    float:left;
+}
+.nav_right{
+    float:right;
+}
+nav{
+    width:100%;
+    height: 60px;
+    background-color: #494d5f;
+    font-size: 0;
+}
+nav a{
+    font-size: 27px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e5eaf5;
+    font-family: 'FashionVictim' !important;
+    transition: 0.3s all ease-in-out;
+    padding: 14px 20px;
+}
+nav a:hover{
+    background-color: #d08df4;
+}
+.navbar .icon {
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+  }
+}
+@media screen and (max-width: 750px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+  .navbar.responsive a {
+        float: none;
+        background-color: #494d5f;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float:right;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+  .navbar.responsive a a:hover {
+      float: none;
+      background-color: #494d5f;
+      display: block;
+  }
+}
+
+
+.flexing{
+    display: flex;
+    justify-content: space-evenly;
+}
+.better{
+    display:;
+    justify-content: center;
+    align-items: center;
+}
+.cuter{
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 2;
+}
+a{
+    text-decoration: none;
+    color: #e5eaf5;
+}
+.btn{
+    width:150px;
+    height: 50px;
+    border-radius: 20%;
+    background-color: #494d5f;
+    font-family: monospace;
+    font-size: 30px;
+    border: none;
+}
+.btn:hover{
+    background-color: #52576e;
+    box-shadow: 2px 3px 4px;
+}
+input{
+    width:240px;
+    height:30px;
+    font-family: monospace;
+    font-size: 18px;
+    border-width:medium;
+    border-color: #52576e;
+}
+input:hover{
+    box-shadow: 2px 3px 4px;
+}
+textarea{
+    width:360px;
+    font-family: monospace;
+    font-size: 18px;
+    border-width:medium;
+    border-color: #52576e;
+}
+textarea:hover{
+    box-shadow: 2px 3px 4px;
+}

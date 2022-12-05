@@ -1,0 +1,201 @@
+body{
+    background-color: #e5eaf5;
+}
+.logo{
+    float:left;
+}
+.nav_right{
+    float:right;
+}
+nav{
+    width:100%;
+    height: 60px;
+    background-color: #494d5f;
+    font-size: 0;
+}
+nav a{
+    font-size: 27px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e5eaf5;
+    font-family: 'FashionVictim' !important;
+    transition: 0.3s all ease-in-out;
+    padding: 14px 20px;
+}
+nav a:hover{
+    background-color: #d08df4;
+}
+.navbar .icon {
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+  }
+}
+@media screen and (max-width: 750px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+    .navbar.responsive a {
+      float: none;
+        background-color: #494d5f;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float:right;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+  .navbar.responsive a a:hover {
+      float: none;
+      background-color: #494d5f;
+      display: block;
+  }
+}
+
+/*cute arrow code*/
+.services{
+    text-align: center;
+    line-height: 4;
+    background-color:#494d5f;
+    height:510px;
+    color: white;  
+}
+.para{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 30px;
+}
+.extra{
+    font-family: sans-serif;
+    font-size:40px;
+    
+}
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+@keyframes arrow{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+@-webkit-keyframes arrow{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s;
+}
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s;
+}
+
+.row{
+    position: relative;
+    top:30px;
+    background-color: #e5eaf5;
+    border-bottom: 2px solid #e5eaf5;
+    border-right: 3px solid #e5eaf5;
+    padding-left: 20px;
+}
+.colum{
+    float:left;
+    width:30%;
+    text-align: center;
+    border-right: 20px solid #e5eaf5;
+}
+.colum:hover{
+    cursor: pointer;
+  --c:  #494d5f;  /*the border color */
+  --b: 10px;     /*the border thickness*/
+  
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%,var(--c) 0;
+  background: 
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+     var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+    conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+     0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+  transition: .1s, background-position .1s .1s;
+}
+.colum:hover {
+  --_i: 100%;
+  transition: .1s, background-size .1s .1s;
+}
+.circle{
+    font-family: monospace;
+    position:relative;
+    left:5%;
+    font-size: 30px;
+    height:70px;
+    width:350px;
+}
+.font{
+    position:relative;
+    top:-90px;
+    font-size:18px;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+.lef{
+    margin-top: 50px;
+    width:50%;
+    float: left;
+    background-color: aqua;
+}
+.rig{
+    margin-top: 50px;
+    width:50%;
+    float: right;
+}
+.six{
+    float:left;
+    width:23%;
+    padding-left: 15px;
+}
+
+.foot{
+    position: relative;
+    top:200px;
+    background-image: url(wp4779318.webp);
+}

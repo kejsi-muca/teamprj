@@ -1,8 +1,20 @@
 body{
     background-color: #e5eaf5;
 }
-.logo{
-    float:left;
+#container {
+    filter: url(#threshold) blur(0.6px);
+}
+#text1,
+#text2 {
+    position: absolute;
+    margin:1px;
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    font-family: monospace;
+    font-size:45px;
+    margin-left:20px;
+    user-select: none;
 }
 .nav_right{
     float:right;
@@ -24,7 +36,9 @@ nav a{
     padding: 14px 20px;
 }
 nav a:hover{
-    background-color: #d08df4;
+    transition: 0.3 all ease-in-out;
+    background-color: #52576e;
+    box-shadow: 2px 3px 4px 2px;
 }
 .navbar .icon {
     display: none;
@@ -70,15 +84,39 @@ nav a:hover{
   }
 }
 
+pre{
+    color: #494d5f;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+.img_foot{
+    padding-left:530px
+}
+.hre_2{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
 
 .flexing{
     display: flex;
     justify-content: space-evenly;
 }
 .better{
-    display:;
     justify-content: center;
     align-items: center;
+    line-height: 1;
+}
+h1{
+    font-family: monospace;
+    font-size: 40px;
+    color: #494d5f;
+}
+.pa{
+    font-family: monospace;
+    font-size: 16px;
+    color: #494d5f;
 }
 .cuter{
     font-family: monospace;
@@ -111,7 +149,7 @@ input{
     border-color: #52576e;
 }
 input:hover{
-    box-shadow: 2px 3px 4px;
+    box-shadow: 2px 3px 4px 2px;
 }
 textarea{
     width:360px;
@@ -121,5 +159,11 @@ textarea{
     border-color: #52576e;
 }
 textarea:hover{
-    box-shadow: 2px 3px 4px;
+    box-shadow: 2px 3px 4px 2px;
+}
+.location{
+    display: flex;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-top: 30px;
 }

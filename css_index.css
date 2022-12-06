@@ -3,11 +3,26 @@
     cursor:col-resize;
 }
 */
+html {
+  scroll-behavior: smooth;
+}
 body{
     background-color: #e5eaf5;
 }
-.logo{
-    float:left;
+#container {
+    filter: url(#threshold) blur(0.6px);
+}
+#text1,
+#text2 {
+    position: absolute;
+    margin:1px;
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    font-family: monospace;
+    font-size:45px;
+    margin-left:20px;
+    user-select: none;
 }
 .nav_right{
     float:right;
@@ -29,7 +44,9 @@ nav a{
     padding: 14px 20px;
 }
 nav a:hover{
-    background-color: #d08df4;
+    transition: 0.3 all ease-in-out;
+    background-color: #52576e;
+    box-shadow: 2px 3px 4px 2px;
 }
 .navbar .icon {
     display: none;
@@ -73,6 +90,18 @@ nav a:hover{
       background-color: #494d5f;
       display: block;
   }
+}
+.scroll{
+     text-decoration: none;
+    position: relative;
+    top:-21px;
+    height:56px;
+    color: white;
+    background-color: #52576e;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 
@@ -132,18 +161,6 @@ nav a:hover{
     color: #333;
 }
 
-.br_quote{
-    position: relative;
-    top:-30px;
-    text-align: center;
-    color: #494d5f;
-    font-family: FashionVictim;
-    font-size: 40px  
-}
-.br_quote:hover{
-    transition: 0.8s all ease-in-out;
-    color: #e5eaf5;
-}
 /*work in this section is uncomplete*/
 #content1:hover{
     content: url("wakabayashi-cap-red-4-200x200.jpg");
@@ -155,35 +172,45 @@ nav a:hover{
 }
 
 /*the code of company mission visson*/
-/*
-.company{
-    position: relative;
-    top:-50px;
+.flex-cont{
+    display: flex;
+    margin:30px;
+    justify-content:space-evenly;
+    align-items: center;
 }
-*/
-.left_c{
-    width: 50%;
-    float: left;
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 40px;
+    color: #494d5f;
 }
 .miss{
-    text-align: center;
-    position: relative;
-    top:190px;
     font-size:50px;
     font-family: monospace;
     font-weight: bold;
-    color: #494d5f
+    color: #494d5f;
+    margin: 3px;
+}
+.miss:hover{
+     transform: scale(1.2);
+}
+.more:hover{
+    transform: scale(1.5);
 }
 .right_c{
     width:50%;
     float: right;
     border: 10px solid #494d5f;
 }
+.right_c:hover{
+     transform: scale(1.1);
+}
 .lorem{
     font-family: monospace;
     font-size: 16px;
     line-height: 1.5;
 }
+
 
 /*the border effect this is not mine fully cuz some part of my code were not working*/
 
@@ -250,4 +277,79 @@ nav a:hover{
 		--gradX: 50%;
 		--gradY: 0%;
 	}
+}
+
+
+.flex_4{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #494d5f;
+    padding:20px;
+}
+.btn{
+    width:150px;
+    height: 50px;
+    border-radius: 20%;
+    background-color: #e5eaf5;
+    font-family: monospace;
+    font-size: 30px;
+    border: none;
+}
+.btn:hover{
+    background-color: #e5eaf5;
+    box-shadow: 2px 3px 4px;
+}
+input{
+    width:340px;
+    height:50px;
+    margin:20px;
+    border-radius: 20%;
+    font-family: monospace;
+    font-size: 18px;
+    border-width:medium;
+    border-color: #52576e;
+}
+input:hover{
+    box-shadow: 2px 3px 4px 2px;
+}
+a{
+    text-decoration: none;
+    color: #52576e;
+}
+.sidihet{
+    color:#e5eaf5;
+    line-height:3;
+    font-family: monospace;
+}
+.hre{
+    color:#e5eaf5;
+    background-color: #494d8f;
+    padding: 15px;
+}
+/*
+.hre:hover{
+    background-color: #e5eaf5;
+    color:#494d5f;
+}*/
+
+.foo_2{
+    display:flex;
+    background-color: darkgrey;
+    margin-top:20px;
+    padding: 10px;
+}
+.hre_2{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+pre{
+    color:#e5eaf5;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+.img_foot{
+    padding-left:530px
 }

@@ -1,151 +1,83 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body{
+    background-color: #e5eaf5;
 }
-
-body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(32, 32, 32);
-  overflow: hidden;
-  cursor: none;
+#container {
+    filter: url(#threshold) blur(0.6px);
 }
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main {
-  height: 200px;
-  width: 300px;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-
-  .links {
-    @include flex-center();
-
-    .link {
-      --color: rgba(255, 255, 255, 0.5);
-
-      position: relative;
-      font-size: 0.95rem;
-      font-family: "Sainte Colombe";
-      text-decoration: none;
-      color: var(--color);
-      margin: 2rem;
-      cursor: none;
-      transition: color 300ms ease;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background: rgb(255, 255, 255);
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform 300ms ease;
-      }
-
-      &:hover {
-        --color: rgb(255, 255, 255);
-        &::after {
-          transform-origin: left;
-          transform: scaleX(1);
-        }
-      }
-    }
-  }
-  .socials {
-    @include flex-center();
-
-    .social {
-      --icon-size: 40px;
-      width: var(--icon-size);
-      height: var(--icon-size);
-      @include flex-center();
-      border-radius: 0.5rem;
-      margin: 1.5rem;
-      color: #fff;
-      background: var(--bg);
-
-      &.codepen {
-        --bg: #000;
-      }
-      &.youtube {
-        --bg: #c4302b;
-      }
-      &.dribbble {
-        --bg: #ea4c89;
-      }
-      &.twitter {
-        --bg: #00acee;
-      }
-    }
-  }
-}
-
-.cursor {
-  .cursor--small,
-  .cursor--large,
-  .cursor--text {
-    position: fixed;
-    left: 0;
-    top: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    width: var(--cursor-size);
-    height: var(--cursor-size);
-    mix-blend-mode: difference;
-    pointer-events: none;
+#text1,
+#text2 {
+    position: absolute;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size:27px;
+    margin-left:20px;
     user-select: none;
+}
+.nav_right{
+    float:right;
+}
+nav{
+    width:100%;
+    height: 60px;
+    background-color: #494d5f;
+    font-size: 0;
+}
+nav a{
+    font-size: 27px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e5eaf5;
+    font-family: 'FashionVictim' !important;
+    transition: 0.3s all ease-in-out;
+    padding: 14px 20px;
+}
+nav a:hover{
+    transition: 0.3 all ease-in-out;
+    background-color: #52576e;
+    box-shadow: 2px 3px 4px 2px;
+}
+.navbar .icon {
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
   }
-
-  .cursor--text {
-    --cursor-size: fit-content;
-    font-size: 0.75rem;
-    color: #fff;
-    opacity: 0;
-    .text {
-      font-family: sans-serif;
-      font-weight: bold;
-    }
+}
+@media screen and (max-width: 750px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
   }
-
-  .cursor--small {
-    --cursor-size: 20px;
-    background: #fff;
+  .navbar.responsive a {
+        float: none;
+        background-color: #494d5f;
+        display: block;
   }
-
-  .cursor--large {
-    --cursor-size: 60px;
-    border: 2px solid #fff;
+}
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float:right;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+  .navbar.responsive a a:hover {
+      float: none;
+      background-color: #494d5f;
+      display: block;
   }
 }
 
-.support {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 10px;
-  display: flex;
-  a {
-    margin: 0 15px;
-    color: #fff;
-    font-size: 1.8rem;
-    backface-visibility: hidden;
-    transition: all 150ms ease;
-    mix-blend-mode: difference;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-}

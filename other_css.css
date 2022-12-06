@@ -1,8 +1,20 @@
 body{
     background-color: #e5eaf5;
 }
-.logo{
-    float:left;
+#container {
+    filter: url(#threshold) blur(0.6px);
+}
+#text1,
+#text2 {
+    position: absolute;
+    margin:1px;
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    font-family: monospace;
+    font-size:45px;
+    margin-left:20px;
+    user-select: none;
 }
 .nav_right{
     float:right;
@@ -24,7 +36,9 @@ nav a{
     padding: 14px 20px;
 }
 nav a:hover{
-    background-color: #d08df4;
+    transition: 0.3 all ease-in-out;
+    background-color: #52576e;
+    box-shadow: 2px 3px 4px 2px;
 }
 .navbar .icon {
     display: none;
@@ -43,8 +57,8 @@ nav a:hover{
         right: 0;
         top: 0;
   }
-    .navbar.responsive a {
-      float: none;
+  .navbar.responsive a {
+        float: none;
         background-color: #494d5f;
         display: block;
   }
@@ -68,6 +82,28 @@ nav a:hover{
       background-color: #494d5f;
       display: block;
   }
+}
+
+
+.foo_2{
+    display:flex;
+    background-color: darkgrey;
+    margin-top:20px;
+    padding: 10px;
+}
+.hre_2{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+pre{
+    color:#e5eaf5;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+.img_foot{
+    padding-left:530px
 }
 
 /*cute arrow code*/

@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
     background-color: #e5eaf5;
 }
@@ -83,6 +86,40 @@ nav a:hover{
       display: block;
   }
 }
+.scroll{
+     text-decoration: none;
+    position: relative;
+    top:-21px;
+    height:56px;
+    color: white;
+    background-color: #52576e;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.flex_three{
+    display: flex;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+.flex3_div{
+    font-family: monospace;
+    margin: 18px;
+    border: 3px #494d5f solid;
+}
+.flex3_div:hover{
+    transition: 0.3 all ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 2px 3px 4px 2px;
+}
+.design{
+    padding: 10px;
+}
+
+
 
 
 .foo_2{
@@ -164,54 +201,6 @@ pre{
 	-webkit-animation-delay:0s;
 }
 
-.row{
-    position: relative;
-    top:30px;
-    background-color: #e5eaf5;
-    border-bottom: 2px solid #e5eaf5;
-    border-right: 3px solid #e5eaf5;
-    padding-left: 20px;
-}
-.colum{
-    float:left;
-    width:30%;
-    text-align: center;
-    border-right: 20px solid #e5eaf5;
-}
-.colum:hover{
-    cursor: pointer;
-  --c:  #494d5f;  /*the border color */
-  --b: 10px;     /*the border thickness*/
-  
-  padding: calc(var(--g) + var(--b));
-  --_g: #0000 25%,var(--c) 0;
-  background: 
-    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
-     var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
-    conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
-     0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
-  transition: .1s, background-position .1s .1s;
-}
-.colum:hover {
-  --_i: 100%;
-  transition: .1s, background-size .1s .1s;
-}
-.circle{
-    font-family: monospace;
-    position:relative;
-    left:5%;
-    font-size: 30px;
-    height:70px;
-    width:350px;
-}
-.font{
-    position:relative;
-    top:-90px;
-    font-size:18px;
-    text-align: center;
-    font-family: monospace;
-}
-
 
 .lef{
     margin-top: 50px;
@@ -228,10 +217,4 @@ pre{
     float:left;
     width:23%;
     padding-left: 15px;
-}
-
-.foot{
-    position: relative;
-    top:200px;
-    background-image: url(wp4779318.webp);
 }

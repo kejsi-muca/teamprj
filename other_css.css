@@ -86,6 +86,7 @@ nav a:hover{
       display: block;
   }
 }
+
 .scroll{
      text-decoration: none;
     position: relative;
@@ -98,6 +99,7 @@ nav a:hover{
     font-size: 30px;
     font-weight: bolder;
 }
+
 .flex_three{
     display: flex;
 }
@@ -105,12 +107,13 @@ h2{
     font-size: 30px;
     text-align: center;
 }
-.flex3_div{
+.flex1_div{
     font-family: monospace;
-    margin: 18px;
-    border: 3px #494d5f solid;
+    margin: 20px;
+    border: 5px dashed #494d5f;
+    animation: spin 3s linear infinite;
 }
-.flex3_div:hover{
+.flex1_div:hover{
     transition: 0.3 all ease-in-out;
     transform: scale(1.1);
     box-shadow: 2px 3px 4px 2px;
@@ -118,9 +121,83 @@ h2{
 .design{
     padding: 10px;
 }
+@keyframes spin { 
+    100% { 
+    transform: rotateZ(0deg);
+  }
+}
+
+.flex_four{
+    display: flex;
+    background-color: #494d5f;
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 40px;
+    padding: 40px;
+    color: #e5eaf5;
+}
+.within_flex{
+    display: flex;
+    margin: 50px;
+}
+.teksti{
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e5eaf5;
+}
+.btn {
+    width:220px;
+    height: 50px;
+    border-radius: 20%;
+    background-color: #e5eaf5;
+    border: none;
+    font-family: monospace;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #e5eaf5;
+    box-shadow: 2px 3px 4px;
+}
 
 
-
+.intern{
+    text-align: center;
+    font-family: monospace;
+    font-size: 40px;
+    padding: 40px;
+    color: #494d5f;
+}
+.img1{
+    display: flex;
+    justify-content: center;
+}
+.intern_img{
+    width:50px;
+    height:50px;
+}
+.flex_five{
+    display: flex;
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+.flex2_div{
+    font-family: monospace;
+    margin: 10px;
+}
+.flex2_div:hover{
+    transition: 0.3 all ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 2px 3px 4px 2px;
+}
 
 .foo_2{
     display:flex;
@@ -143,24 +220,6 @@ pre{
     padding-left:530px
 }
 
-/*cute arrow code*/
-.services{
-    text-align: center;
-    line-height: 4;
-    background-color:#494d5f;
-    height:510px;
-    color: white;  
-}
-.para{
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 30px;
-}
-.extra{
-    font-family: sans-serif;
-    font-size:40px;
-    
-}
 .arrows {
 	width: 60px;
 	height: 72px;
@@ -201,20 +260,3 @@ pre{
 	-webkit-animation-delay:0s;
 }
 
-
-.lef{
-    margin-top: 50px;
-    width:50%;
-    float: left;
-    background-color: aqua;
-}
-.rig{
-    margin-top: 50px;
-    width:50%;
-    float: right;
-}
-.six{
-    float:left;
-    width:23%;
-    padding-left: 15px;
-}

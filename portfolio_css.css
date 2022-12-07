@@ -1,0 +1,374 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background-color: #e5eaf5;
+}
+#container {
+    filter: url(#threshold) blur(0.6px);
+}
+#text1,
+#text2 {
+    position: absolute;
+    margin:1px;
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    font-family: monospace;
+    font-size:45px;
+    margin-left:20px;
+    user-select: none;
+}
+.nav_right{
+    float:right;
+}
+nav{
+    position: static;
+    width:100%;
+    height: 60px;
+    background-color: #494d5f;
+    font-size: 0;
+}
+nav a{
+    font-size: 27px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e5eaf5;
+    font-family: 'FashionVictim' !important;
+    transition: 0.3s all ease-in-out;
+    padding: 14px 20px;
+}
+nav a:hover{
+    transition: 0.3 all ease-in-out;
+    background-color: #52576e;
+    box-shadow: 2px 3px 4px 2px;
+}
+.navbar .icon {
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+  }
+}
+@media screen and (max-width: 750px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+  .navbar.responsive a {
+        float: none;
+        background-color: #494d5f;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float:right;
+        display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+  }
+  .navbar.responsive a a:hover {
+      float: none;
+      background-color: #494d5f;
+      display: block;
+  }
+}
+
+.scroll{
+     text-decoration: none;
+    position: relative;
+    top:-21px;
+    height:56px;
+    color: white;
+    background-color: #52576e;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bolder;
+}
+a{
+    text-decoration: none;
+    color: #52576e;
+}
+
+.foo_2{
+    display:flex;
+    background-color: darkgrey;
+    margin-top:20px;
+    padding: 10px;
+}
+.foo4{
+    display: flex;
+    justify-content: flex-start;
+}
+.hre_2{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin: 10px
+}
+pre{
+    color:#e5eaf5;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+.img_foot{
+    float:left;
+    padding-left:400px;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+.arrows path {
+	stroke: #494d5f;
+	fill: transparent;
+	stroke-width: 10px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+@keyframes arrow{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+@-webkit-keyframes arrow{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s;
+}
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s;
+}
+
+.slider {
+    width: 100%;
+    background-color: #494d5f;
+}
+.slider input {
+    display: none;
+}
+.pics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 580px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 60px;
+    color: #e5eaf5;
+}
+.lab {
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 10%;
+    background-color: #e5eaf5;
+    padding: 30px;
+    width: 550px;
+    text-align: center;
+    transition: transform 0.4s;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.slide {
+    width: 450px;
+    height: 350px;
+    border-radius: 10%;
+}
+.slide_text {
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #494d5f;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots label {
+    display: block;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #e5eaf5;
+    margin: 7px;
+    transition: transform 0.2s, color 0.2s;
+}
+/* First */
+#t-1:checked ~ .dots label[for="t-1"] {
+    transform: scale(2);
+    background-color: #fff;
+}
+#t-1:checked ~ .dots label[for="t-2"] {
+    transform: scale(1.5);
+}
+#t-1:checked ~ .pics label[for="t-1"] {
+    z-index: 4;
+}
+#t-1:checked ~ .picss label[for="t-2"] {
+    transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+    z-index: 3;
+}
+#t-1:checked ~ .pics label[for="t-3"] {
+    transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+    z-index: 2;
+}
+#t-1:checked ~ .pics label[for="t-4"] {
+    transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
+    z-index: 1;
+}
+#t-1:checked ~ .pics label[for="t-5"] {
+    transform: translateX(1200px) translateZ(-360px) rotateY(-45deg);
+}
+/* Second */
+#t-2:checked ~ .dots label[for="t-1"] {
+    transform: scale(1.5);
+}
+#t-2:checked ~ .dots label[for="t-2"] {
+    transform: scale(2);
+    background-color: #fff;
+}
+#t-2:checked ~ .dots label[for="t-3"] {
+    transform: scale(1.5);
+}
+#t-2:checked ~ .pics label[for="t-1"] {
+    transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+}
+#t-2:checked ~ .pics label[for="t-2"] {
+    z-index: 3;
+}
+#t-2:checked ~ .pics label[for="t-3"] {
+    transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+    z-index: 2;
+}
+#t-2:checked ~ .pics label[for="t-4"] {
+    transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+    z-index: 1;
+}
+#t-2:checked ~ .pics label[for="t-5"] {
+    transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
+}
+/* Third */
+#t-3:checked ~ .dots label[for="t-2"] {
+    transform: scale(1.5);
+}
+#t-3:checked ~ .dots label[for="t-3"] {
+    transform: scale(2);
+    background-color: #fff;
+}
+#t-3:checked ~ .dots label[for="t-4"] {
+    transform: scale(1.5);
+}
+#t-3:checked ~ .pics label[for="t-1"] {
+    transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+}
+#t-3:checked ~ .pics label[for="t-2"] {
+    transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+}
+#t-3:checked ~ .pics label[for="t-3"] {
+    z-index: 3;
+}
+#t-3:checked ~ .pics label[for="t-4"] {
+    transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+    z-index: 2;
+}
+#t-3:checked ~ .pics label[for="t-5"] {
+    transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+}
+/* Fourth */
+#t-4:checked ~ .dots label[for="t-3"] {
+    transform: scale(1.5);
+}
+#t-4:checked ~ .dots label[for="t-4"] {
+    transform: scale(2);
+    background-color: #fff;
+}
+#t-4:checked ~ .dots label[for="t-5"] {
+    transform: scale(1.5);
+}
+#t-4:checked ~ .pics label[for="t-1"] {
+    transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
+}
+#t-4:checked ~ .pics label[for="t-2"] {
+    transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+}
+#t-4:checked ~ .pics label[for="t-3"] {
+    transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+    z-index: 2;
+}
+#t-4:checked ~ .pics label[for="t-4"] {
+    z-index: 3;
+}
+#t-4:checked ~ .pics label[for="t-5"] {
+    transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+}
+/* Fifth */
+#t-5:checked ~ .dots label[for="t-4"] {
+    transform: scale(1.5);
+}
+#t-5:checked ~ .dots label[for="t-5"] {
+    transform: scale(2);
+    background-color: #fff;
+}
+#t-5:checked ~ .pics label[for="t-1"] {
+    transform: translateX(-1200px) translateZ(-360px) rotateY(45deg);
+}
+#t-5:checked ~ .pics label[for="t-2"] {
+    transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
+  z-index: 1;
+}
+#t-5:checked ~ .pics label[for="t-3"] {
+    transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+  z-index: 2;
+}
+#t-5:checked ~ .pics label[for="t-4"] {
+    transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+    z-index: 3;
+}
+#t-5:checked ~ .pics label[for="t-5"] {
+    z-index: 4;
+}
+
+
+.three_pics{
+    display: flex;
+}

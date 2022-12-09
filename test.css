@@ -1,29 +1,47 @@
-body{
-    background-color: #e5eaf5;
+img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0;
 }
-.flex_three{
-    display: flex;
+
+.title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
 }
-h2{
-    font-size: 30px;
-    text-align: center;
+
+.left_c:hover .title {
+  top: 90px;
 }
-.flex1_div{
-    font-family: monospace;
-    margin: 20px;
-    border: 5px dashed #494d5f;
-    animation: spin 3s linear infinite;
+
+.button {
+  position: absolute;
+  width: 500px;
+  left:0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
 }
-.flex1_div:hover{
-    transition: 0.3 all ease-in-out;
-    transform: scale(1.1);
-    box-shadow: 2px 3px 4px 2px;
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
 }
-.design{
-    padding: 10px;
-}
-@keyframes spin { 
-  100% { 
-    transform: rotateZ(0deg);
-  }
+
+.left_c:hover .button {
+  opacity: 1;
 }

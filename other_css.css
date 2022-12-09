@@ -133,15 +133,16 @@ h2{
     background-color: #494d5f;
 }
 h1{
-    text-align: center;
     font-family: monospace;
-    font-size: 40px;
-    padding: 40px;
+    font-size: 38px;
+    text-align: center;
+    padding: 10px;
     color: #e5eaf5;
 }
 .within_flex{
     display: flex;
-    margin: 50px;
+    margin: 40px;
+    max-width: 1200px;
 }
 .teksti{
     font-family: monospace;
@@ -173,14 +174,15 @@ a{
     font-size: 40px;
     padding: 40px;
     color: #494d5f;
+    font-weight: bolder;
 }
 .img1{
     display: flex;
     justify-content: center;
 }
 .intern_img{
-    width:50px;
-    height:50px;
+    width:70px;
+    height:70px;
 }
 .flex_five{
     display: flex;
@@ -194,6 +196,7 @@ h3{
 .flex2_div{
     font-family: monospace;
     margin: 10px;
+    max-width: 300px;
 }
 .flex2_div:hover{
     transition: 0.3 all ease-in-out;
@@ -205,7 +208,7 @@ h3{
 
 .foo_2{
     display:flex;
-    background-color: darkgrey;
+    background-color: #494d5f;
     margin-top:20px;
     padding: 10px;
 }

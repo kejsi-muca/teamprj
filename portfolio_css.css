@@ -107,7 +107,7 @@ a{
 
 .foo_2{
     display:flex;
-    background-color: darkgrey;
+    background-color: #494d5f;
     margin-top:20px;
     padding: 10px;
 }
@@ -368,7 +368,126 @@ h1{
     z-index: 4;
 }
 
+h2{
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    color: #494d5f;
+}
 
-.three_pics{
+.flex-cont{
     display: flex;
+    margin:30px;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.more{
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-webkit-transition: all 1s ease;
+}
+
+.more:hover{
+filter: grayscale(0%);
+filter: gray;
+-webkit-filter: grayscale(0%);
+filter: none;
+transition: 1s ease;
+}
+
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 40px;
+    color: #494d5f;
+}
+.miss{
+    font-size:50px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #494d5f;
+    margin: 3px;
+}
+.miss:hover{
+     transform: scale(1.2);
+}
+.right_c{
+    width:60%;
+    float: right;
+    border: 10px solid #494d5f;
+}
+.right_c:hover{
+     transform: scale(1.1);
+}
+.lorem{
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #e5eaf5;
+	--c2: #494d5f;
+}
+
+.right_c {
+	border: 10px solid;
+	padding: 10px;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+.right_c:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }

@@ -91,9 +91,9 @@ nav a:hover{
 
 
 .scroll{
-     text-decoration: none;
+    text-decoration: none;
     position: relative;
-    top:-21px;
+    top:-45px;
     height:56px;
     color: white;
     background-color: #52576e;
@@ -102,63 +102,51 @@ nav a:hover{
     font-size: 30px;
     font-weight: bolder;
 }
+.scroll:hover{
+    color:#494d5f;
+    background-color: #e5eaf5;
+}
 
-
-.slide-container{
-    position: relative;
-    top: 10px;
-    width: 100%;
+.us{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
     background-color: #494d5f;
 }
-.slide-content{
-    width: 400px;
-    padding: 0 140px;
-    margin: 0 40px;
-}
-.card{
-    border-radius: 40px;
+.idk{
     background-color: #e5eaf5;
-    margin: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    margin: 20px;
+    border-radius: 10%;
 }
-.image-content, 
-.card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 15px;
+.idk:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 3px 4px;
 }
-.image-content{
-    position: relative;
-    padding-top: 10px;
+h3{
+    color: #494d5f;
+    font-size: 30px;
+    text-align: center
 }
-.overlay{
-    position: absolute;
-    top:0;
-    height: 100%;
-    width: 100%;
-    border-radius: 25px 25px 25px;
-}
-.overlay::after{
-    border-radius: 0 25px 0 0;
-    background-color: #fff;
-}
-.card-image{
-    position: relative;
+.idk2{
     height: 300px;
     width: 340px;
 }
-.card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+.idk2:hover{
+    content: url(3.png);
 }
-.name{
-    font-family:monospace;
-    font-size: 24px;
-    font-weight: 500;
-    color: #333;
+.idk3{
+    height: 300px;
+    width: 340px;
 }
+.idk3:hover{
+    content: url(1-1.png);
+}
+
 
 /*work in this section is uncomplete*/
 #content1:hover{
@@ -324,15 +312,10 @@ a{
     background-color: #494d8f;
     padding: 15px;
 }
-/*
-.hre:hover{
-    background-color: #e5eaf5;
-    color:#494d5f;
-}*/
 
 .foo_2{
     display:flex;
-    background-color: darkgrey;
+    background-color: #494d5f;
     margin-top:20px;
     padding: 10px;
 }

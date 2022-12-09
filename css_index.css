@@ -143,20 +143,7 @@ h3{
     height: 300px;
     width: 340px;
 }
-.idk3:hover{
-    content: url(1-1.png);
-}
 
-
-/*work in this section is uncomplete*/
-#content1:hover{
-    content: url("wakabayashi-cap-red-4-200x200.jpg");
-    border-radius: 20px;
-}
-#content2:hover{
-    content: url("taglioAlta_001433.jpg");
-    border-radius: 20px;
-}
 
 /*the code of company mission visson*/
 .flex-cont{
